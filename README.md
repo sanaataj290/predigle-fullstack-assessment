@@ -1,3 +1,4 @@
+
 # Document Review System
 
 A full-stack document review application built with Django REST Framework and React. Submitters can create document metadata, and reviewers can approve or reject pending submissions.
@@ -237,25 +238,24 @@ Manual examples are available in [backend/manual_tests.http](backend/manual_test
 
 From the backend virtual environment:
 
-```bash
+
 cd backend
 python manage.py test -v 2
-```
+
 
 The suite verifies document creation, title validation, document retrieval, status updates, terminal review states, missing IDs, unsupported methods, and model behavior.
 
 Check Django configuration without running the full test suite:
 
-```bash
+
 python manage.py check
-```
+
 
 ### Frontend Build
 
-```bash
 cd frontend
 npm run build
-```
+
 
 The production bundle is generated in `frontend/dist/`.
 
@@ -320,6 +320,4 @@ This project is configured for local development and a technical assessment. Bef
 - Add database migrations to the deployment process
 - Avoid committing database files or runtime cache directories
 
-## License
 
-No license has been specified for this project. Add a license file if you intend to permit reuse or redistribution.
