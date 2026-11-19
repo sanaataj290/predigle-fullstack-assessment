@@ -1,0 +1,10 @@
+/* App Specific Layout Styles */
+.app-footer {
+  border-top: 1px solid var(--border-color);
+  background-color: #ffffff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: auto;
+}

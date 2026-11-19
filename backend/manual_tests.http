@@ -1,0 +1,41 @@
+
+@baseUrl = http://localhost:8000/api
+
+### TEST 1: Create a valid document
+POST {{baseUrl}}/documents/
+Content-Type: application/json
+
+{
+  "title": "Document testing 1",
+  "description": "Testing successful document submission."
+}
+
+### TEST 2: Reject an empty title
+POST {{baseUrl}}/documents/
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": "This submission should fail."
+}
+
+### TEST 3: Retrieve all submissions
+GET {{baseUrl}}/documents/
+
+### TEST 4: Approve a document
+# Replace 1 with the actual ID returned by Test 1.
+PATCH {{baseUrl}}/documents/3/status/
+Content-Type: application/json
+
+{
+  "status": "approved"
+}
+
+### EXTRA TEST: Reject a document
+# Replace 2 with the ID of another pending document.
+PATCH {{baseUrl}}/documents/2/status/
+Content-Type: application/json
+
+{
+  "status": "rejected"
+}
